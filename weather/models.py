@@ -18,10 +18,20 @@ class Continent(models.Model):
     def __str__(self): 
         return self.heading
 
-class Earthquake(models.Model):
+class Temp_changes_couses(models.Model):
     heading = models.CharField(max_length=50)
-    image = models.FileField()
-    discription = models.TextField(max_length=1000)
+    discription = models.TextField(max_length=3000)
 
     def __str__(self): 
         return self.heading
+
+class Earthquake_data(models.Model):
+    date = models.DateField()
+    location = models.CharField(max_length=50)
+    coordinates = models.CharField(max_length=50)
+    deaths = models.CharField(max_length=50)
+    magnitude = models.CharField(max_length=50)
+
+    def __str__(self): 
+        return self.location
+    

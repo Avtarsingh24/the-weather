@@ -4,7 +4,10 @@
 
 <head>
         
-    
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +27,49 @@
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
 </head>
+
+
+<style>  #cssTable td 
+    {
+        text-align: center; 
+        vertical-align: middle;
+    }
+    
+    
+    
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  
+  td, th {
+    border: 3px solid #faf8f8;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #976be9;
+  }
+    
+  
+  
+  
+    
+    </style>
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
     <!-- Preloader Start -->
@@ -47,12 +93,8 @@
                             <div class="collapse navbar-collapse" id="ca-navbar">
                                 <ul class="navbar-nav ml-auto" id="nav">
                                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#screenshot">Gallery</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#Temperature">Temperature</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#features">Earthquake</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                                 </ul>
                                 <div class="sing-up-button d-lg-none">
@@ -65,7 +107,7 @@
                 <!-- Signup btn -->
                 <div class="col-12 col-lg-2">
                     <div class="sing-up-button d-none d-lg-block">
-                        <a href="#">Sign Up Free</a>
+                        <a href="http://127.0.0.1:8000/admin">admin login</a>
                     </div>
                 </div>
             </div>
@@ -92,14 +134,10 @@
                         <h2>The climate</h2>
                         <h3>C</h3>
 
-                        <p>Everything You Need. To Start Selling Online Beautifully</p>
+                        <p>Climate is the statistics of weather over long periods of time.[1][2] It is measured by assessing the patterns of variation in temperature, humidity, atmospheric pressure, wind, precipitation, atmospheric particle count and other meteorological variables in a given region over long periods of time. Climate differs from weather, in that weather only describes the short-term conditions of these variables in a given region.</p>
                     </div>
                     <div class="get-start-area">
                         <!-- Form Start -->
-                        <form action="#" method="post" class="form-inline">
-                            <input type="email" class="form-control email" placeholder="name@company.com">
-                            <input type="submit" class="submit" value="Get Started">
-                        </form>
                         <!-- Form End -->
                    
                        
@@ -109,60 +147,60 @@
             
         </div>
 
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-        <!-- Welcome thumb -->
+      <!-- Welcome thumb -->
 
         <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" align="right">
-           <!-- <div align="right">
-                {% for weather in weather_data %}
-                    <div class="box">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <span class="title">{{ weather.city }}</span>
-                                        <br>
-                                        <span class="subtitle">{{ weather.temperature }}° F</span>
-                                        <br> {{ weather.description }}
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    {% endfor %}
-            </div>> -->
-            <!-- <img src="{% static 'img/bg-img/sun1.jpg' %}" alt=""> -->
-
+           
          </div>
     </section>
     <!-- ***** Wellcome Area End ***** -->
 
+
+
+
+
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="Temperature">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading Text -->
+                    <div class="section-heading text-center">
+                            <br> <br>
+                        <h2>Temperature Change</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 align="center"><font color="green">Why temperature is changing?</font></h1><br>
+            <hr color="blue"><br>
+            <dl>
+                
+            {% for coz in qs1 %}
+                <br>
+            <h2  align="justify"><font color="blue" style="text-align:justify;">{{ coz.heading }}</font></h2></dt>
+            <br>
+            <dd>
+            <h4  align="justify">{{ coz.discription }} 
+            </h4>
+            </dd>
+            <br>
+            {% endfor %}
+            </dl>
+
+        <hr color="blue"><br>
+                       
+    </section>
+
+
+
+
+
+
+
+
+
+   
 
 
 
@@ -182,33 +220,150 @@
                 <div class="col-12">
                     <!-- Heading Text -->
                     <div class="section-heading text-center">
-                        <h2>World Climate</h2>
-                        <div class="line-shape">Continental Climate</div>
+                            <br> <br>
+                        <h2>Earth Quake</h2>
+                        <div class="line-shape"></div>
                     </div>
                 </div>
             </div>
+            <div>
+                <h2 align="center"><font color="blue">Why Do Earthquakes Happen?</font></h2><br><hr color="blue">
+<table>
+                                    <tr>
+                                        <td width="30%"><img src="{% static 'img/Earth-img/earth.jpg' %}" width="300" height="400"></td>
+                                        <td>
+                                    <h4>
+                                      <p align="justify">  
 
-                    <table >
-                        {% for gg in object_list%}
-                        <tr>
-                            <td align="center" width="40%">
-                                    <h1>{{gg.heading}}</h1>
-                                    {% if gg.image %}
-                                   <ol> <li><img src="{{gg.image.url}}" width="400" height="400">
-                                    </li>
-                                    </ol>
-                                    <br>
-                                    {% endif %}
-                            </td>
-                            <td align="center">{{gg.discription}}</td>
-                        </tr>
-                        {% endfor %}
-                    </table>
+                                        Earthquakes are usually caused when rock underground suddenly breaks along a fault. This sudden release of energy causes the seismic waves that make the ground shake. When two blocks of rock or two plates are rubbing against each other, they stick a little. They don't just slide smoothly; the rocks catch on each other. The rocks are still pushing against each other, but not moving. After a while, the rocks break because of all the pressure that's built up. When the rocks break, the earthquake occurs. During the earthquake and afterward, the plates or blocks of rock start moving, and they continue to move until they get stuck again. The spot underground where the rock breaks is called the focus of the earthquake. The place right above the focus (on top of the ground) is called the epicenter of the earthquake.
+                                        
+                                        Try this little experiment:
+                                        
+                                            
+                                        Break a block of foam rubber in half.
+                                        Put the pieces on a smooth table.
+                                        Put the rough edges of the foam rubber pieces together.
+                                        While pushing the two pieces together lightly, push one piece away from you along the table top while pulling the other piece toward you. See how they stick?
+                                        Keep pushing and pulling smoothly.
+                                        
+                                        Soon a little bit of foam rubber along the crack (the fault) will break and the two pieces will suddenly slip past each other. That sudden breaking of the foam rubber is the earthquake. That's just what happens along a strike-slip fault.
+                                        Earthquake-like seismic waves can also be caused by explosions underground. These explosions may be set off to break rock while making tunnels for roads, railroads, subways, or mines. These explosions, however, don't cause very strong seismic waves. You may not even feel them. Sometimes seismic waves occur when the roof or walls of a mine collapse. These can sometimes be felt by people near the mine. The largest underground explosions, from tests of nuclear warheads (bombs), can create seismic waves very much like large earthquakes. This fact has been exploited as a means to enforce the global nuclear test ban, because no nuclear warhead can be detonated on earth without producing such seismic waves.
+                                    </p>
+                                    </h4>
+                                    </td>
+                                </tr>
+            </table>
+            <hr color="blue"><br>
+            <h1 align="center" ><font color="blue"size="15" >Three Types of Stress on the Earth's Crust</font></h1>
+            <br><br>
+            <dl><br>
+            <dt><h2><font color="blue">Compression: When Plates Collide</font></h2></dt>
+            <br>
+            <dd><h4  align="justify">When plates press against each other, one plate's edge is pressed downward by the compression as the other plate's edge rides over it. These subduction zones appear as deep ocean trenches, usually facing mountains -- the protruding edge of the overriding plate. In many places, such as the Pacific Ocean's "Ring of Fire," the material of the sinking crust interacts with the hot mantle below, causing lines of volcanoes such as those found in the Aleutian Islands, the Andes, and the Cascade Range of the western United States.</dd> 
+            </h4><br>
+            <dt><h2><font color="blue">Tension: When Plates Pull Apart</font></h2></dt> 
+            <br>
+            <dd><h4  align="justify">Crustal plates pulling apart from each other, or fracturing, under tension can develop rift valleys as seen in East Africa. Crust fills the developing gaps in the form of basalt, which can flood the surface to form a basaltic sill. In the mid-oceanic ridges in the Atlantic and Pacific oceans, molten basalt released under the water hardens into pillow-like blobs, creating new oceanic crust. the newest crust is closest to the ridges. Hydrothermal vents release hot, mineral-laden water, which resembles black smoke.</dd> 
+            </h4><br>
+            <dt><h2><font color="blue">Shear: When Plates Grind Along Each Other</font></h2></dt>
+            <br>
+            <dd><h4  align="justify">In some cases, the edges of the plates slide past each other, neither significantly pressing together, nor pulling apart. Here the movement causes a lateral shear. Where movement causes horizontal displacement, it is called a "strike-slip" fault. The San Andreas Fault, where the Pacific Plate has been sliding northwestward past the North American Plate, provides a good example. The movement isn't smooth; the plates build up stress which eventually releases in a sudden movement, causing earthquakes like the 1906 San Fransisco event.</dd>    
+            </h4>
+            </dl>
+
+
+
+                        <hr color="blue"><br>
+                        <div class="container"><br><br>
+                            <h1 align="center"><font color="blue" size="6">Major Earthquakes Around The World</font></h1><br>
+                            <br>
+                            <div class="panel-group">
+                              
+                          
+                              <div class="panel panel-primary">
+                                <div class="panel-heading"><h3><font color="white">Data From 2000</font></h3></div>
+                                
+
+
+                                 <table width="100%" border="1">
+                                   <tr align="center" >
+                                      <th><h2><font color="green">Date</font></h2></th>
+                                      <th><h2><font color="green">Location</font></h2></th>
+                                      <th><h2><font color="green">Coordinates</font></h2></th>
+                                        <th><h2><font color="green">Deaths</font></h2></th>
+                                            <th><h2><font color="green">Magnitude</font></h2></th>
+                                        </tr>
+                                    {% for w in qs2 %}
+                                    <tr align="center">
+                                      <td><h3>{{ w.date }}</h3></td>
+                                      <td><h3>{{ w.location }}</h3></td>
+                                      <td><h3>{{ w.coordinates }}</h3></td>
+                                      <td><h3>{{ w.deaths }}</h3></td>
+                                      <td><h3>{{ w.magnitude }}</h3></td>
+                                    </tr>
+                                  {% endfor %}
+                             </table>
+                               
+                            </div>
+                          </div>
+                      </div>
+    </section>
+
+    <!-- ***** Awesome Features End ***** -->
+
+
+
+
+    <section class="our-monthly-membership section_padding_50 clearfix">
+            <div class="container">
+                         </div>
+        </section>
+
+
+
+<!-- ***** Contact Us Area Start ***** -->
+<section class="footer-contact-area section_padding_100 clearfix" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>Get in touch with us!</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                    <div class="footer-text">
+                        </div>
+                    <div class="address-text">
+                        <p><span>Address:</span>Ladowali RD, jalandhar,punjab 144001</p>
+                    </div>
+                    <div class="phone-text">
+                        <p><span>Phone:</span> +919465886948</p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>Email:</span> avtarsingh24hr@gmail.com</p>
+                    </div>
+                </div>
+<div class="col-md-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.271355517069!2d75.58644721462588!3d31.323878263953368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a44fe0ad8e7%3A0xd5d2574fbe41e548!2sGuru+Nanak+Dev+University+College!5e0!3m2!1sen!2sin!4v1551618035369" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>  
             </div>
-
         </div>
     </section>
-    <!-- ***** Awesome Features End ***** -->
+       <!-- ***** Contact Us Area End ***** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -216,34 +371,26 @@
 
     <!-- ***** Footer Area Start ***** -->
     <footer class="footer-social-icon text-center section_padding_70 clearfix">
-        <!-- footer logo -->
-        <div class="footer-text">
-            <h2>The Weather</h2>
-        </div>
-        <!-- social icon-->
-        <div class="footer-social-icon">
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-        </div>
-        <div class="footer-menu">
-            <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- Foooter Text-->
-        <div class="copyright-text">
-            <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
-            <p>Copyright ©2019 Ca. Designed by <a href="https://colorlib.com" target="_blank">avtar</a></p>
-        </div>
-    </footer>
-    <!-- ***** Footer Area Start ***** -->
+            <!-- footer logo -->
+            <div class="footer-text">
+                <h2>The Weather</h2>
+            </div>
+            <!-- social icon-->
+            <div class="footer-social-icon">
+                <a href="https://facebook.com/avtarsingh24hr"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
+                <a href="https://twitter.com/avtarsi37862180"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/avtar_singh_sondhi"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <div class="footer-menu"></div>
+                </nav>
+            </div>
+            <!-- Foooter Text-->
+            <div class="copyright-text">
+                <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+                <p>Copyright ©2019 Designed by <font color="blue">avtar singh</font></p>
+            </div>
+        </footer>
+        <!-- ***** Footer Area Start ***** -->
 
     <!-- Jquery-2.2.4 JS -->
     <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
@@ -262,128 +409,4 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What's the weather like?</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
-</head>
-<body>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    The Weather
-                </h1>
-                <a href="http://localhost:8000/admin/login/?next=/admin/">login</a>
-            </div>
-            
-        </div>
-    </section>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
-                    <form method="POST">
-                        {% csrf_token %}
-                        <div class="field has-addons">
-                            <div class="control is-expanded">
-                                {{ form.name }}
-                            </div>
-                            <div class="control">
-                                <button class="button is-info">
-                                    Add City
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
-                    {% for weather in weather_data %}
-                    <div class="box">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <span class="title">{{ weather.city }}</span>
-                                        <br>
-                                        <span class="subtitle">{{ weather.temperature }}° F</span>
-                                        <br> {{ weather.description }}
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-    </footer>
-</body>
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
 

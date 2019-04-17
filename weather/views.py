@@ -1,15 +1,16 @@
 from django.shortcuts import render
 import requests
-from .models import City,Continent
+from .models import City,Continent,Earthquake_data,Temp_changes_couses
 from .forms import CityForm
 from django.views.generic import ListView
 
-
+ 
 
 def index(request):
-    cities = City.objects.all() #return all the cities in the database
-
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=271d1234d3f497eed5b1d80a07b3fcd1'
+    cities = City.objects.all()[0:4] #return all the cities in the database
+    citiesd = City.objects.all().latest('name') #return all the cities in the database
+    print(citiesd)
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=205ac0b11586197656f07adb5e533793'
 
     if request.method == 'POST': # only true if form is submitted
         form = CityForm(request.POST) # add actual request data to form for processing
@@ -22,13 +23,12 @@ def index(request):
     for city in cities:
 
         city_weather = requests.get(url.format(city)).json() #request the API data and convert the JSON to Python data types
-        print(city_weather)
         weather = {
             'city' : city,
             'temperature' : city_weather['main']['temp'],
             'description' : city_weather['weather'][0]['description'],
             'icon' : city_weather['weather'][0]['icon']
-        }
+            }
 
         weather_data.append(weather) 
     
@@ -45,14 +45,11 @@ class Continent_list(ListView):
 
 
 
-
-
-class index2(ListView):
-    model = Continent
-    template_name = 'weather/index2.html'
-
-
-
-class earthquake(ListView):
-    model = Continent
-    template_name = 'weather/earthquake.html'
+def index1(request):
+    qs1 = Temp_changes_couses.objects.all()
+    qs2 = Earthquake_data.objects.all()
+    context = {
+        'qs1':qs1,
+        'qs2':qs2
+    }
+    return render (request, 'weather/index2.html', context)
