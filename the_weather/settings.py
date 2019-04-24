@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -135,3 +136,11 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
 LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = "/"
+
+
+
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True     
+# SESSION_COOKIE_AGE = 30                 
+SESSION_SAVE_EVERY_REQUEST = True

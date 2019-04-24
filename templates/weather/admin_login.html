@@ -1,0 +1,333 @@
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+
+      
+<head>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>The Weather - App Landing Page</title> 
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+
+
+    
+      
+
+
+</head>
+<style> 
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container11 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 100%;
+}
+
+
+
+
+ #cssTable td 
+        {
+            text-align: center; 
+            vertical-align: middle;
+        }
+        
+        
+        
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+      }
+      
+      td, th {
+        border: 3px solid #faf8f8;
+        text-align: center;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #828bdb;
+      }
+        
+      h3 {color: white;}
+      
+      #c {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;   
+}  
+
+
+
+        </style>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="colorlib-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Menu Area Start -->
+                <div class="col-12 col-lg-10">
+                    <div class="menu_area">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <!-- Logo -->
+                            <h1><font color="white"size="7">Menu</font></h1>
+                            <!-- <a class="navbar-brand" href="#">Ca.</a> -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                            <!-- Menu Area -->
+                            <div class="collapse navbar-collapse" id="ca-navbar">
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li class="nav-item"><a class="nav-link" href="#features">FeedBack</a></li>
+                                    <li class="nav-item"><a class="nav-link" href='/index2'>CLimate</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                </ul>
+                                <div class="sing-up-button d-lg-none">
+                                    
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Signup btn -->
+                <div class="col-12 col-lg-2">
+                    <div class="sing-up-button d-none d-lg-block">
+                        <a href="{% url 'home' %}">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+
+
+
+
+
+
+    <!-- ***** Wellcome Area Start ***** -->
+    <section class="wellcome_area clearfix" id="home">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-md">
+                        <div class="wellcome-heading">
+                            <h2>Admin Login</h2>
+                            <h3>AdminLogin</h3>
+    
+                            <p></p>
+                        </div>
+                        <div class="get-start-area">
+                            <!-- Form Start -->
+                            <!-- Form End -->
+                       
+                           
+                             </div>
+                    </div>
+                </div>
+                
+            </div>
+    
+        <!-- Welcome thumb -->
+
+        <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" align="right">
+           
+         </div>
+    </section>
+    <!-- ***** Wellcome Area End ***** -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ***** Awesome Features Start ***** -->
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
+
+<div align="center" width="50%">
+       
+            <div class="row">
+                    <div class="col-12">
+                        <!-- Heading Text -->
+                        <br>    
+                        <div class="section-heading text-center">
+                            <h2>Admin Login</h2>
+                            <div class="line-shape"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!-- weather forecasting area start-->
+            <div class="container">
+                <p>Your Feedback is important to us. Please tell us about your experience...............</p>
+            </br>  <div class="section-heading text-center">
+
+                            <div class="container11">
+                              <form action="" method="POST">
+                                {% csrf_token %}
+                                <input type="text" style="font-size:20px;" id="fname" name="username" placeholder="Your name..">
+                                <input type="text" style="font-size:20px;" id="lname" name="password" placeholder="Email.">
+                            
+                                <input type="submit" value="Submit">
+                              </form>
+                            </div>
+                            
+                            
+                    
+                    
+                    
+                    
+                    </div>
+            </div>
+                                
+    </section>
+
+    
+
+    <section class="our-monthly-membership section_padding_50 clearfix">
+            <div class="container">
+                    <div class="section-heading" align= "center">
+                         </div>
+    
+                        
+        </section>
+    <!-- ***** Contact Us Area Start ***** -->
+    <section class="footer-contact-area section_padding_100 clearfix" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>Get in touch with us!</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                    <div class="footer-text">
+                        </div>
+                    <div class="address-text">
+                        <p><span>Address:</span>Ladowali RD, jalandhar,punjab 144001</p>
+                    </div>
+                    <div class="phone-text">
+                        <p><span>Phone:</span> +919465886948</p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>Email:</span> avtarsingh24hr@gmail.com</p>
+                    </div>
+                </div>
+<div class="col-md-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.271355517069!2d75.58644721462588!3d31.323878263953368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a44fe0ad8e7%3A0xd5d2574fbe41e548!2sGuru+Nanak+Dev+University+College!5e0!3m2!1sen!2sin!4v1551618035369" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us Area End ***** -->
+
+
+
+
+
+
+
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+        <!-- footer logo -->
+        <div class="footer-text">
+            <h2>The Weather</h2>
+        </div>
+        <!-- social icon-->
+        <div class="footer-social-icon">
+            <a href="https://facebook.com/avtarsingh24hr"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
+            <a href="https://twitter.com/avtarsi37862180"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/avtar_singh_sondhi"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-menu"></div>
+            </nav>
+        </div>
+        <!-- Foooter Text-->
+        <div class="copyright-text">
+            <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+            <p>Copyright ©2019 Designed by <font color="blue">avtar singh</font></p>
+        </div>
+    </footer>
+    <!-- ***** Footer Area Start ***** -->
+
+    <!-- Jquery-2.2.4 JS -->
+    <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap-4 Beta JS -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins JS -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- Slick Slider Js-->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <!-- Footer Reveal JS -->
+    <script src="{% static 'js/footer-reveal.min.js' %}"></script>
+    <!-- Active JS -->
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
+
+</html>

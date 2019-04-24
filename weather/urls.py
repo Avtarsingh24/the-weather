@@ -4,6 +4,7 @@ from . views import *
 
 urlpatterns = [
     path('', index, name = 'home'),
-    path('continent/',Continent_list.as_view(), name ='Continentlist'),
+    path('FeedBack/',FeedBack, name ='FeedBack'),
     path('index2/',index1 ,name ='index2'),
+    path('admin_login/',admin_login, name ='admin'),
     ]

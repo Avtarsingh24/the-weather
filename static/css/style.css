@@ -476,6 +476,7 @@ p {
 .form-control::-webkit-input-placeholder {
     color: #cec1f4;
     opacity: 1;
+    
 }
 
 .form-control:-ms-input-placeholder {

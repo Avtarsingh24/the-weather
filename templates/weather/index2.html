@@ -3,8 +3,12 @@
 <html lang="en">
 
 <head>
-        
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,7 +19,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Colorlib App - App Landing Page</title> 
+    <title>The Weather - App Landing Page</title> 
 
     <!-- Favicon -->
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
@@ -45,17 +49,32 @@
   }
   
   td, th {
-    border: 3px solid #faf8f8;
+    border: 3px solid white;
     text-align: center;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #976be9;
+    background-color: #e3e7e9c9;
   }
     
   
-  
+  .button {
+  background-color:rgb(84, 84, 175);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button5 {border-radius: 12px;}
+
   
     
     </style>
@@ -86,7 +105,7 @@
                     <div class="menu_area">
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <!-- Logo -->
-                            <h1><font color="white">Menu</font></h1>
+                            <h1><font color="white"size="7">Menu</font></h1>
                             <!-- <a class="navbar-brand" href="#">Ca.</a> -->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                             <!-- Menu Area -->
@@ -132,9 +151,9 @@
                 <div class="col-12 col-md">
                     <div class="wellcome-heading">
                         <h2>The climate</h2>
-                        <h3>C</h3>
+                        <h3>Climate</h3>
 
-                        <p>Climate is the statistics of weather over long periods of time.[1][2] It is measured by assessing the patterns of variation in temperature, humidity, atmospheric pressure, wind, precipitation, atmospheric particle count and other meteorological variables in a given region over long periods of time. Climate differs from weather, in that weather only describes the short-term conditions of these variables in a given region.</p>
+                        <p>Climate is the statistics of weather over long periods of time.It is measured by assessing the patterns of variation in temperature, humidity, atmospheric pressure, wind, precipitation, atmospheric particle count and other meteorological variables in a given region over long periods of time. Climate differs from weather, in that weather only describes the short-term conditions of these variables in a given region.</p>
                     </div>
                     <div class="get-start-area">
                         <!-- Form Start -->
@@ -187,7 +206,11 @@
             <br>
             {% endfor %}
             </dl>
-
+            <br><br>
+            <div align="center"><h1><font  color="red">Change In World Temperature</font></h1></div>
+            <br>
+            <img src="{% static 'img/Earth-img/temp.jpg' %}" width="100%" height="400">
+            <br><br>
         <hr color="blue"><br>
                        
     </section>
@@ -274,6 +297,80 @@
 
 
                         <hr color="blue"><br>
+
+                        <br><br><br>
+                        <div class="container">
+                                <h2><font size="6" color="blue">Major Earthquakes</font></h2>
+                                 <p>An earthquake is a sudden shaking movement of the surface of the earth. It is known as a quake, tremblor or tremor. Earthquakes can range in size from those that are so weak that they cannot be felt to those violent enough to toss people around and destroy whole cities. The seismicity or seismic activity of an area refers to the frequency, type and size of earthquakes experienced over a period of time.</p>
+                                 <br><br>
+                                 <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="thumbnail">
+                                      
+                                        <img src="{% static 'img/Earth-img/gujrat2.jpg' %}" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                          <p>The 2001 Gujarat earthquake,occurred on 26 January, India's 52nd Republic Day, at 08:46 AM </p>
+                                        </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="thumbnail">
+                                      
+                                        <img src="{% static 'img/Earth-img/nepal1.jpg' %}" alt="Nature" style="width:100%">
+                                        <div class="caption">
+                                          <p>The April 2015 Nepal earthquake (also known as the Gorkha earthquake)[5][8] killed nearly 9,000 people and injured nearly 22,000</p>
+                                        </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="thumbnail">
+                                      
+                                        <img src="{% static 'img/Earth-img/japan.jpg' %}" alt="Fjords" style="width:100%">
+                                        <div class="caption">
+                                          <p>The 2011 earthquake off the Pacific coast of Tōhoku was a magnitude 9.0–9.1 (Mw) occurred at 14:46 JST on Friday 11 March 2011</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+        
+        
+        
+        
+                                <div class="row">
+                                        <div class="col-md-4">
+                                          <div class="thumbnail">
+                                            
+                                              <img src="{% static 'img/Earth-img/china.jpg' %}" alt="Lights" style="width:100%">
+                                              <div class="caption">
+                                                <p>The 2008 Sichuan earthquake, Wenchuan earthquake, occurred at 14:28:01 China Standard Time on May 12, 2008. </p>
+                                              </div>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="thumbnail">
+                                            
+                                              <img src="{% static 'img/Earth-img/pak.jpg' %}" alt="Nature" style="width:100%">
+                                              <div class="caption">
+                                                <p>The 2008 Ziarat earthquake hit the Pakistani province of Balochistan on October 29 with a moment magnitude of 6.4.</p>
+                                              </div>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="thumbnail">
+                                            
+                                              <img src="{% static 'img/Earth-img/indona.jpg' %}" alt="Fjords" style="width:100%">
+                                              <div class="caption">
+                                                <p>On 28 September 2018, a shallow, Indonesia, with its epicentre located in the mountainous Donggala Regency, Central Sulawesi</p>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                           </div>
+        
                         <div class="container"><br><br>
                             <h1 align="center"><font color="blue" size="6">Major Earthquakes Around The World</font></h1><br>
                             <br>
@@ -307,6 +404,8 @@
                             </div>
                           </div>
                       </div>
+                      <br><br>
+
     </section>
 
     <!-- ***** Awesome Features End ***** -->
@@ -342,6 +441,14 @@
                     <div class="email-text">
                         <p><span>Email:</span> avtarsingh24hr@gmail.com</p>
                     </div>
+                    <div class="address-text">
+                            <p><span>FeedBack:</span>Give Us Your Important FeadBack</p>
+                        </div>
+                        
+
+                             <h2><button class="button button5"><a href="{% url 'FeedBack' %}"><font color="white">Feedback</font></a></button></h2>
+                
+
                 </div>
 <div class="col-md-6">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.271355517069!2d75.58644721462588!3d31.323878263953368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a44fe0ad8e7%3A0xd5d2574fbe41e548!2sGuru+Nanak+Dev+University+College!5e0!3m2!1sen!2sin!4v1551618035369" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
