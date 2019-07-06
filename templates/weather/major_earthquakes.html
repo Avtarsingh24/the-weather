@@ -1,0 +1,608 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>The Weather - App Landing Page</title> 
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+</head>
+
+
+<style>  #cssTable td 
+    {
+        text-align: center; 
+        vertical-align: middle;
+    }
+    
+    
+    
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  
+  td, th {
+    border: 3px solid white;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e3e7e9c9;
+  }
+    
+  
+  .button {
+  background-color:rgb(84, 84, 175);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button5 {border-radius: 12px;}
+
+  
+    
+    </style>
+
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="colorlib-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Menu Area Start -->
+                <div class="col-12 col-lg-10">
+                    <div class="menu_area">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <!-- Logo -->
+                            <h1><font color="white"size="7">Menu</font></h1>
+                            <!-- <a class="navbar-brand" href="#">Ca.</a> -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                            <!-- Menu Area -->
+                            <div class="collapse navbar-collapse" id="ca-navbar">
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#features">Gujarat</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#pak">Pakistan</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#china">China</a></li>
+                                    <li class="nav-item"><a class="nav-link" href='/climate'>CLimate</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                </ul>
+                                <div class="sing-up-button d-lg-none">
+                                    <a href="#">Sign Up Free</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Signup btn -->
+                <div class="col-12 col-lg-2">
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ***** Wellcome Area Start ***** -->
+    <section class="wellcome_area clearfix" id="home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <h2>Major Earthquakes</h2>
+                        <h3>Major Earthquakes</h3>
+
+                        </div>
+                    <div class="get-start-area">
+                        <!-- Form Start -->
+                        <!-- Form End -->
+                   
+                       
+                         </div>
+                </div>
+            </div>
+            
+        </div>
+
+      <!-- Welcome thumb -->
+
+        <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" align="right">
+           
+         </div>
+    </section>
+    <!-- ***** Wellcome Area End ***** -->
+
+
+
+
+
+   
+    <!-- ***** Awesome Features Start ***** -->
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading Text -->
+                    <div class="section-heading text-center">
+                            <br> <br>
+                        <h2>Gujarat</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr color="blue">
+      <table>
+                                    <tr>
+                                        <td width="45%"><img src="{% static 'img/Earth-img/Gujrat_page.jpg' %}" width="500" height="400"></td>
+                                        <td>
+                                    
+                                      <p align="justify">  
+
+                                            Gujarat Earthquake, 2001. Around 8.45 in the morning on India's 52nd Republic Day — January 26, 2001, a powerful earthquake measuring 7.7 on the Richter scale struck Gujarat. The earthquake caused over 13,800 deaths and extensive damage to properties in the state 
+                                            <br>
+                                            The M7 earthquake in Gujarat in January 2001 was caused by a fault that ruptured deep in the Earth's crust. The ultimate cause is the collision between the Indian plate and the Eurasian Plate. ... The cause of the Gujarat earthquake on Jan. 26, 2001 was stress from the Indian plate pushing north into the Eurasian plate.</p>
+                                    
+                                        
+                                    </td>
+                                </tr>
+            </table>
+            <hr color="blue"><br>
+            
+
+
+                        <br><br><br>
+                        <div class="container">
+                                <h2><font size="6" color="blue"> Earthquakes Impact</font></h2>
+                                 <br><br>
+                                 <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="thumbnail">
+                                      
+                                        <img src="{% static 'img/Earth-img/g1.jpg' %}" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                         </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="thumbnail">
+                                      
+                                        <img src="{% static 'img/Earth-img/g2.jpg' %}" alt="Nature" style="width:100%">
+                                        <div class="caption">
+                                        </div>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="thumbnail">
+                                      
+                                        <img src="{% static 'img/Earth-img/g6.jpg' %}" alt="Fjords" style="width:100%">
+                                        <div class="caption">
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+        
+        
+        
+        
+                                <div class="row">
+                                        <div class="col-md-4">
+                                          <div class="thumbnail">
+                                            
+                                              <img src="{% static 'img/Earth-img/g5.jpg' %}" alt="Lights" style="width:100%">
+                                              <div class="caption">
+                                              </div>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="thumbnail">
+                                            
+                                              <img src="{% static 'img/Earth-img/g4.jpg' %}" alt="Nature" style="width:100%">
+                                              <div class="caption">
+                                              </div>
+                                            
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="thumbnail">
+                                            
+                                              <img src="{% static 'img/Earth-img/indona.jpg' %}" alt="Fjords" style="width:100%">
+                                              <div class="caption">
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                           </div>
+                            
+                      <br><br>
+
+
+<div>
+
+
+                           <h2> 1. Thousands of People Died</h2>
+                           <br>
+                          <p align="justify">  According to the reports, the earthquake killed between 13,805 and 20,023 people, which was one of the deadliest earthquakes in the history of India.
+                          </p>
+                            <br>
+                            <h2>2. Millions of House Destroyed</h2>
+                            <br>
+                            
+                            <p align="justify"> According to the official figure, the earthquake destroyed about 400,000 homes and unofficial figure is much larger than that.
+                            
+                            Competely Destroyed Houses in Gujarat Earthquake 2001
+                            Competely Destroyed Houses in Gujarat Earthquake 2001
+                            </p>
+                             
+                            <h2> 3. Earthquake Magnitude and Time</h2>
+                            
+                            <p align="justify"> It was one of the strongest earthquakes in the history of India. The government recorded a magnitude of 7.7 on the moment magnitude scale and it was lasted for over 2 minutes.
+                            </p>
+                            <h2> Bhuj Civil Hospital destroyed completely</h2>
+                            
+                            <p align="justify"> Bhuj Civil Hospital was destroyed completely due to this deadly earthquake which killed thousands of people in the state.
+                            </p>
+                        <h2>5. Gujarat Earthquake 2001 Epicentre</h2>  
+                            <p align="justify">The epicentre of Gujarat Earthquake 2001 was located about 20 kms North East of Bhuj, Gujarat. Bhuj was completely destroyed after earthquake hit the district hard.
+                            </p>
+                        <h2>  6. Worst Affected Areas</h2>
+                            <p align="justify">Bhuj, Anjar, Rapar, Bachau, Morvi, Wankaner, Ahmedabad City, Jodiya, and Dhrol were the worst affected areas of Gujarat Earthquake 2001.
+                            </p>
+                            
+                        <h2> 7. On 26th January, 2001, Paramilitary Forces Reached</h2>
+                        <p align="justify">
+                            The Government of India sent 1500 Paramilitary personnel of BSF,RAF, CRPF, SSB to Ahmedabad, Bhuj and Jamnagar.
+                            
+                           </p>
+                        <h2>8. Money Poured From Around The World</h2>
+                            <p align="justify"> 
+                         To build Gujarat again, World Bank (WB) announced an assistance amount of $300 million. Asian Development Bank (ADB) also announced an assistance of $350 million.
+                            </p>
+                        <h2> 9. Unknown Fact: Corruption in Relief Work and Many Other</h2>
+                            <p align="justify">
+                            Many corrupted people ate relief material as well as money given for the relief of victims of Gujarat Earthquake 2001.
+                            </p>
+                            
+               </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="pak">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading Text -->
+                    <div class="section-heading text-center">
+                            <br> <br>
+                        <h2>Pakistan</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr color="blue">
+      <table>
+                                    <tr>
+                                        <td width="45%"><img src="{% static 'img/Earth-img/pak1.jpg' %}" width="500" height="400"></td>
+                                        <td>
+                                    
+                                      <p align="justify">  
+
+                                        The 2008 Ziarat earthquake hit the Pakistani province of Balochistan on October 29 with a moment magnitude of 6.4. The US Geological Survey reported that the quake occurred 60 km (37 mi) north of Quetta and 185 km (115 mi) southeast of the Afghanistan city of Kandahar at 04:09 local time (28 October, 23:09 UTC) at a depth of 15 km (9.3 mi), at 30.653°N, 67.323°E.<br> It was followed by another shallower magnitude 6.4 earthquake at a depth of 10 km (6.2 mi) approximately 12 hours after the initial shock, at 30.546°N, 67.447°E.215 people were confirmed dead. More than 200 were injured (according to Mohammed Zaman, assistant to the Balochistan chief secretary, Nasir Khosa),and 120,000 were homeless (according to Dilawar Khan Kakar, Ziarat, Balochistan mayor and chief administrator).</p>
+                                    
+                                        
+                                    </td>
+                                </tr>
+            </table>
+            <hr color="blue"><br>
+            
+
+
+                        <br><br><br>
+                        <br><br>
+
+
+<div>
+
+
+    <p align="justify">
+
+    On October 8, 2005, at 8:50 a.m. local time, a magnitude Mw = 7.6 earthquake struck the Himalayan region of northern Pakistan and Kashmir. The earthquake epicenter was located approximately 9 km north northeast of the city of Muzaffarabad, the capital of the Pakistani-administered part of Kashmir, known as Azad Jammu Kashmir (AJK).
+    
+    The Pakistani government's official death toll as of November 2005 stood at 87,350, although it is estimated that the death toll could reach over 100,000. Approximately 38,000 were injured and over 3.5 million rendered homeless. According to government figures, 19,000 children died in the earthquake, most of them in widespread collapses of school buildings. The earthquake affected more than 500,000 families. In addition, approximately 250,000 farm animals died due to collapse of stone barns, and more than 500,000 large animals required immediate shelter from the harsh winter.
+    
+    It is estimated that more than 780,000 buildings were either destroyed or damaged beyond repair, and many more were rendered unusable for extended periods of time.</p>
+    <br>
+    <h2>
+    Seismotectonics
+    </h2><p align="justify">
+    Seismic activity in South Asia is a direct result of the collision of the Indian and the Eurasian plates, which results from the northwestern motion of the Indian Plate at the rate of 4-5 cm per year. The re-sulting collision has fractured the Indian plate into several slices beneath the Kashmir Basin and is known as the Indus-Kohistan seismic zone (Seeber and Armbruster 1979).
+    
+    The earthquake occurred within the Hazara-Kashmir syntaxis of the Himalayan fold belt. The main identified feature in this zone is the Balakot- Bagh fault (Hussain 2005), which is the likely source of the earthquake.The fault plane solution shows a strike of 338 degrees, dipping about 50 degrees in the N-NE direction near the surface with a more gentle dip at depth. Net slip for this event, estimated by field survey and radar range changes, is 4.2 ± 0.5m, with a maximum slip of approximately 5m. The reported focal depth for this event ranges from 3km (MSSP), to 20km (USGS), to 26km (IGS).
+    
+    The intensity distribution estimated and interpreted by the Pakistan Geological Survey is closely associated with the rupture zone. Outside the narrow (5- 0 km) width of the rupture zone, the signs of damage appeared to be fairly minor. While there was damage in more distant locations such as Abbotabad (35 km from upture zone), Islamabad (64 km), and Lahore (> 250 km distant), it can be attributed to local site effects or poor construction rather than direct intense shaking from the earthquake. Within the rupture zone, the city of Muzaffarabad suffered great damage (IX-X on MMI scale), and the city of Balakot was almost totally destroyed (X on MMI scale). The distribution of subsequent aftershocks, in the Balakot, Batagram, Allai, and Beshram Qila areas, suggests that the fault ruptureextended in the NW direction.
+    
+    The surface trace of the causative fault can be interpreted from the map of ground displacements from radar amplitude measurements (COMET 2005). The surface ex- pression of the fault can also beclearly detected in images of lithology change from Landsat data. A 3 -D relief projection shows the expression of this fault not only in the surface geology, but also in the surface geomorphology.
+    
+    Because of the lack of instrumentation, there are no strong motion records within the zone of intense shaking. Observational data and reports from locals suggest a strong vertical component and 30-45 seconds of strong shaking. Strong motion records in Abbotabad (35 km from rupture zone), Murree (34 km), and Nilore (54 km) show maximum horizontal peak ground accelerations (PGA) of 0.231 g, 0.078g and 0.026g, respectively; and vertical PGAs of 0.087g, 0.069g and 0.03g, respectively (MAEC, 2005). Maximum horizontal PGA was 0. 16g at the crest and 0.1 g at the base of Tarbela Dam (located approximately 78 km distant), and 0.1 g at the downstream toe of the Mangla Dam (approximately 90 km distant) were also reported (Ilyas 2005).
+    </p>
+    <br>
+    <h2>
+    Landslides</h2>
+    <p align="justify">
+    Landslide concentrations along the rupture zone were very high, but quickly dissipated within as little as 2 km of the surface projection of the fault. During the aerial reconnaissance of the affected area, landslide damage appeared to be most severe on the hanging wall, with relatively low concentrations on the footwall side. A very high concentration of large and small landslides was observed in the mid-slope area along the surface projection of the fault.
+    
+    The number of slope failures also increased significantly along slopes. Landslide concentration along midslopes. with aspects in the fault-normal direction, showing strong indication of rupture directivity effects. Other effects such as topographic ridge top amplification were widely observed, especially in the case of elongated ridges with steep slopes. In some cases, where the ground motion was perpendicular to the ridge axis, damage was noted on one side of the ridge slope, but not on the other. This variability may be due to active roadbuilding that created a weakness in the direction of total collapse, in addition to the structural/geologic component, thereby adding to the greater susceptibility of one of these slopes.
+    </p><br>
+    <h3>
+    Shallow, Disrupted Landslides:
+    </h3>
+    <p align="justify">
+    Ubiquitous shallow landslides and rock falls on steep natural slopes and in steep road cuts were initiated during the earthquake. They posed the largest threat to mountain roads and structures at slope bases. Even though relatively small in scale, the shallow landslides had a pervasive nature that significantly contributed to damage caused by the earthquake, particularly in the lower slopes inhabited by large human populations. Many of these slopes, such as along the river terrace in Muzaffarabad, continue to pose a major hazard due to the presence of large tension cracks as far back as 10 m, especially since emergency shelters have been set up in such areas.
+    
+    The shallow landslides were not associated with specific geologic units and/or type of slopes. They were as deep as the root zone of the vegetative cover, anywhere from several decimeters to a meter deep, and consisted of dry, highly disaggregated and fractured material that cascaded downslope to flatter areas at or near the base of steep slopes.
+    </p>
+    <br>
+    <h3>
+    Deep-Seated Landslides:
+</h3>
+    <p align="justify">Deepseated landslides were far less numerous than shallow slides. The two most significant ones (larger than 0.1 square km) were noted in Muzaffarabad and in the Jhelum Valley. The former, located north of Muzaffarabad, occurred in a dolomitic limestone unit that had previously failed and dammed the Neelum River for a day. There was evidence of a pre-existing landslide in this formation that had also dammed the river. The enormous, deep-seated failure in the Jhelum Valley was 36 km southeast of the epicenter and within 3 km of the surface projection of the fault in a jointed sandstone unit. The landslide was over 1 km wide and the distance between the top of the slip surface and the toe of the debris was more than 2 km. (See the special earthquake report insert in the December 2005 EERI Newsletter for further discussion of this slide.) The landslide debris created a dam that blocked the convergence of two small rivers at the bottom of the valley.
+    </p>
+    <h3>
+    Rock Falls:
+</h3>
+    <p align="justify">Rock falls involving large rocks or boulders were common and resulted in considerable damage and disruption to roadways, structures, and communities. Many such slides, triggered by frequent aftershocks, resulted in significant fatalities.
+    </p>
+<h3>    Structures:</h3>
+    <p align="justify">
+    Most building damage resulted from ground shaking, though a large number of buildings located mostly on or near slopes were destroyed by ground failure due to landsliding or subsidence. The largest concentration of destroyed or damaged buildings was in Muzaffarabad and Balakot. Other cities such as Bagh and Rawlakot also had significant damage, but were not visited by the EERI team due to limited time. It is estimated that in Muzaffarabad, 30-50% of the build- ings were either destroyed or badly damaged in the main event. Major damage concentrations in Muzaffarabad were in areas of deeper alluvialdeposits along the Neelum and Jhelum rivers. Damage in Balakot was directly related to fault rupture. In Abbotabad, damage was due to local site response in the Cantonmentarea that was reportedly developed on former marshland. Several other towns located along the rupture zone (Bagh to Batagram) also suffered significant damage to their building stock. The widelyphotographed collapse of the highrise Margala Towers in Islamabad, located over 80 km from the epicenter, may have been due to construction- related issues.
+    
+    A helicopter survey revealed that a large number of buildings in the more rural, mountainous areas- perhaps as much as 50% in areas proximate to the fault rupture- were destroyed or severely dam-aged. These were mostly farmhouses belonging to migratory and non-migratory mountain slope farmers. The government of Pakistan estimates that more than 80% of the total destroyed buildings were located in rural regions.
+</p>
+   <h3> Bearing Wall Construction:</h3>
+    <p align="justify">
+    Most of the buildings in the affected area are of nonengineered unreinforced masonry (URM) wall construction. The typical structure consists of one or two stories of unreinforced stone, solid brick or solid concrete block masonry-bearing walls with reinforced concrete floors. Roof structures are flat or pitched. Flat roofs in smaller towns and villages consist of wood (non-machined) beams and straw-reinforced mud slabs and occasionally lightly reinforced concrete slabs ("Tayyar Chath") or GI (galvanized iron) sheets. Larger towns have build- ings built of reinforced concrete slab roofs. Pitched roof construction, gabled, with or without hips, is framed with wood or light steel trusses with corrugated sheet metal roofing. Tiled roofs can also be found in this region. The smaller villages also contain adobe structures that, as expected, performed poorly in the earthquake.
+    
+    Foundations are constructed mostly of stones or bricks bearing on native soils about two to three feet below grade and 8 to 24 inches wide. The only steel reinforcing found in most of the bearing wallconstruction is in lintels (window or door headers), and normally consists of four #4 bars in a 9 x 9 concrete beam with stirrups or ties at 9- 2 inch spacing. Typically, no bond beams are part of the wall and no positive ties exist between the walls and the floors/roofs. The performance of the URM wall buildings in the earthquake was varied and seems to have depended on factors such as redundancy in structural walls and quality of materials and construction.
+    
+    In areas of strong shaking, most stone masonry-bearing wall structures collapsed or suffered severe damage. A majority of these structures were constructed of nondressed round stones with mud orweak cement mortar. The weakness of the mortar was clearly evident; the mortar would crumble even when manipulated with bare hands. Issues with concrete block construction were poor block strength, weak mortar, and lack of seismic detailing. In general, firedclay brick masonry wall buildings appear to have performed better than the other types of wall construction.
+</p>
+ <h3>   Framed Construction:</h3>
+    <p align="justify">
+    A small percentage of buildings in the area, mostly larger multistory buildings in the larger towns, are nonductile reinforced concrete stick frame construction with nonstructural in- fill block or brick walls with plaster finish. The floors are mostly of beam and slab construction supported by columns resting on pad foundations. There is no lateral force-resisting system, and it is mostly infill walls that provide some amount of lateral strength and stiffness. A number of buildings, some of them three or four stories tall, were seen resting entirely on "nonstructural" infill walls while the columns had failed just below the first elevated floor. Many soft/weak story failures were observed in mixed use multistory buildings with open storefronts at the first/ground floor level and walled office/residential space in the upper stories.
+</p>
+    <h3>Schools and Hospitals:</h3>
+    <p align="justify">
+    Virtually all school buildings are government-built and owned, and every community has an elementary school, even the remote villages. Anecdotal evidence suggests catastrophic damage to amuch higher proportion of public schools than nongovernmental buildings in the same areas. Poor quality of construction and lack of seismic design has been faulted in these building collapses. Although most school buildings collapsed totally or partially, many schools were open and functioning with the classes being held in the adjacent school yard.
+</p> </div>
+
+    </section>
+
+
+
+
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="china">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading Text -->
+                    <div class="section-heading text-center">
+                            <br> <br>
+                        <h2>China</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr color="blue">
+      <table>
+                                    <tr>
+                                        <td width="45%"><img src="{% static 'img/Earth-img/china_page.jpg' %}" width="500" height="400"></td>
+                                        <td>                                
+                                      <p align="justify">  
+                                        The 2008 Sichuan earthquake, also known as the Great Sichuan earthquake or Wenchuan earthquake, occurred at 14:28:01 China Standard Time on May 12, 2008. Measuring at 8.0 Ms,the earthquake's epicenter was located 80 kilometres west-northwest of Chengdu, the provincial capital, with a focal depth of 19 km.
+                                        <br>The earthquake ruptured the fault for over 240 km, with surface displacements of several meters.The earthquake was also felt in nearby countries and as far away as both Beijing and Shanghai—1,500 and 1,700 km away—where office buildings swayed with the tremor.Strong aftershocks, some exceeding 6 Ms, continued to hit the area up to several months after the main shock, causing further casualties and damage. The earthquake also caused the largest number of geohazards ever recorded, including about 200,000 landslides and more than 800 quake lakes distributed over an area of 110,000 km2
+                                    </p>        
+                                    </td>
+                                </tr>
+            </table>
+            <hr color="blue"><br>
+            <div>
+<p align="justify">
+    The strongest earthquake to hit China in more than three decades jolted Wenchuan County in Sichuan Province at 2:28pm on 12 May 2008, resulting in the death of over 60,000 people.
+<br><br>
+The tremor measured 8.0 on the Richter scale at an intensity of 11 degrees. It was centred 10-20km below the surface and more than several thousand aftershocks were reported. The two strongest aftershocks were measured at 6.1 on the Richter scale at 3:07pm on 13 May, and 6.4 at 4:21pm on 25 May.
+<br>
+Wenchuan is about 100km northwest of Chengdu, the provincial capital of Sichuan. It has a population of more than 100,000. The neighbouring provinces of Gansu, Chongqin, Shanxi and Yunnan also felt the shock of the earthquake.
+<br>
+Experts from the China Geological Survey Bureau, the China Geological Environmental Monitoring Institute and the Chinese Academy of Geological Sciences, have made the following, preliminary conclusions about the cause of the earthquake:
+<br><br>
+• The Indian plate dives to the Asian plate, causing fast uplift of the Qinghai-Tibet Plateau. The plateau material slowly moves to the east, crushed eastward along the Longmen mountain structure zone on the eastern edge of the plateau. The movement is blocked by the rigid table under the Sichuan Basin, causing the long-term accumulation of structural stress energy. The accumulated energy is suddenly released in the area of the Beichuan–Yinxiu of Longmen mountain structure zone.
+<br><br>
+• The earthquake was a fault earthquake characterised with thrust, clockwise, squeeze movement. It was a one direction breakdown earthquake and the procedure of stress transfer and energy release is relatively slow. This may cause rather strong and long term aftershocks.
+<br><br>
+• The earthquake was shallow, at a depth of 10-20km, but caused enormous destruction.
+<br><br>
+The southwestern area of China is rich in water and hydro power resources. It is the most important hydro power energy base of China. Many hydro projects are constructed or under construction in this area. There are four large dams near the epicentre of the earthquake.
+<br><br>
+• Zipingpu dam – a 156m high CFRD. Its reservoir storage capacity is 11x108m3. The basic earthquake intensity of the dam site area is VII. The designed earthquake intensity is VIII, with a peak ground acceleration of 0.26g. The distance from Zipingpu CFRD to the epicentre is 17km.
+<br><br>
+• Shapai dam – an RCC gravity arch dam with a maximum height of 132m. The designed earthquake intensity is VII, with a peak ground acceleration of 0.138g. Shapai RCC dam is located 12km away from the epicentre.
+<br><br>
+• Bikou dam – located in Gansu province, a neighbouring province of Sichuan, the dam is a 105.3m high clay core rockfill dam. The designed earthquake intensity is 7.5 degree.
+<br><br>
+• Baozhusi dam – this dam is located in Guangyuan, Sichuan province, downstream of Bailongjiang river, 270km from Chengdu. The dam is a concrete gravity dam with a height of 132m. Its reservoir storage capacity is 21x108m3 and the installed capacity of the powerhouse is 700MW. The basic earthquake intensity at the site is VI degree.
+<br></p>
+
+            </div>
+                        <br><br><br>
+                        <br><br>
+<div>
+</div>
+  </section>
+<!-- ***** Awesome Features End ***** -->
+
+
+
+
+    <section class="our-monthly-membership section_padding_50 clearfix">
+            <div class="container">
+                         </div>
+        </section>
+
+<!-- ***** Contact Us Area Start ***** -->
+<section class="footer-contact-area section_padding_100 clearfix" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>Get in touch with us!</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                    <div class="footer-text">
+                        </div>
+                    <div class="address-text">
+                        <p><span>Address:</span>Ladowali RD, jalandhar,punjab 144001</p>
+                    </div>
+                    <div class="phone-text">
+                        <p><span>Phone:</span> +919465886948</p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>Email:</span> avtarsingh24hr@gmail.com</p>
+                    </div>
+                    <div class="address-text">
+                            <p><span>FeedBack:</span>Give Us Your Important FeadBack</p>
+                        </div>
+                        
+
+                             <h2><button class="button button5"><a href="{% url 'FeedBack' %}"><font color="white">Feedback</font></a></button></h2>
+                
+
+                </div>
+<div class="col-md-6">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.271355517069!2d75.58644721462588!3d31.323878263953368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a44fe0ad8e7%3A0xd5d2574fbe41e548!2sGuru+Nanak+Dev+University+College!5e0!3m2!1sen!2sin!4v1551618035369" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>  
+            </div>
+        </div>
+    </section>
+       <!-- ***** Contact Us Area End ***** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+            <!-- footer logo -->
+            <div class="footer-text">
+                <h2>The Weather</h2>
+            </div>
+            <!-- social icon-->
+            <div class="footer-social-icon">
+                <a href="https://facebook.com/avtarsingh24hr"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
+                <a href="https://twitter.com/avtarsi37862180"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/avtar_singh_sondhi"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <div class="footer-menu"></div>
+                </nav>
+            </div>
+            <!-- Foooter Text-->
+            <div class="copyright-text">
+                <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+                <p>Copyright ©2019 Designed by <font color="blue">avtar singh</font></p>
+            </div>
+        </footer>
+        <!-- ***** Footer Area Start ***** -->
+
+    <!-- Jquery-2.2.4 JS -->
+    <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap-4 Beta JS -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins JS -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- Slick Slider Js-->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <!-- Footer Reveal JS -->
+    <script src="{% static 'js/footer-reveal.min.js' %}"></script>
+    <!-- Active JS -->
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
+
+</html>
+

@@ -1,9 +1,20 @@
-{% load static %}
+﻿{% load static %}
+ 
 <!DOCTYPE html>
 <html lang="en">
 
+      
 <head>
         
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+
     
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -12,7 +23,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Colorlib App - App Landing Page</title> 
+    <title>The Weather - App Landing Page</title> 
 
     <!-- Favicon -->
     <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
@@ -23,54 +34,123 @@
     <!-- Responsive CSS -->
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
+
+
+    
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+       $("#b1").click(function(){
+       $("#abc").show(1); 
+       
+       });
+       });
+    </script>
+
 </head>
+<style> 
+
+
+.display_none{
+         display: none;}
+
+        .button {
+  background-color:blue;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button5 {border-radius: 12px;}
+
+
+    #cssTable td 
+        {
+            text-align: center; 
+            vertical-align: middle;
+        }
+        
+        
+        
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        height: 100%;
+      }
+      
+      td, th {
+        border: 3px solid white;
+        text-align: center;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #6e65eb;
+      }
+        
+      h3 {color: white;}
+      
+      #c {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;   
+}  
+
+div.groove {border-style: groove;}
+
+        </style>
 
 <body>
     <!-- Preloader Start -->
     <div id="preloader">
-            <div class="colorlib-load"></div>
-        </div>
-    
-        <!-- ***** Header Area Start ***** -->
-        <header class="header_area animated">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <!-- Menu Area Start -->
-                    <div class="col-12 col-lg-10">
-                        <div class="menu_area">
-                            <nav class="navbar navbar-expand-lg navbar-light">
-                                <!-- Logo -->
-                                <h1><font color="white"size="7">Menu</font></h1>
-                                <!-- <a class="navbar-brand" href="#">Ca.</a> -->
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                                <!-- Menu Area -->
-                                <div class="collapse navbar-collapse" id="ca-navbar">
-                                    <ul class="navbar-nav ml-auto" id="nav">
-                                        <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#features">Today's Weather</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#screenshot">Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href='/index2'>CLimate</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                                    </ul>
-                                    <div class="sing-up-button d-lg-none">
-                                        
-                                    </div>
+        <div class="colorlib-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Menu Area Start -->
+                <div class="col-12 col-lg-10">
+                    <div class="menu_area">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <!-- Logo -->
+                            <h1><font color="white"size="7">Menu</font></h1>
+                            <!-- <a class="navbar-brand" href="#">Ca.</a> -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                            <!-- Menu Area -->
+                            <div class="collapse navbar-collapse" id="ca-navbar">
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#features">Today's Weather</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#screenshot">Gallery</a></li>
+                                    <li class="nav-item"><a class="nav-link" href='/climate'>CLimate</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                </ul>
+                                <div class="sing-up-button d-lg-none">
+                                    
                                 </div>
-                            </nav>
-                        </div>
-                    </div>
-                    <!-- Signup btn -->
-                    <div class="col-12 col-lg-2">
-                        <div class="sing-up-button d-none d-lg-block">
-                            <a href="http://127.0.0.1:8000/admin">Admin Login</a>
-                        </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
+                <!-- Signup btn -->
+                </div>
             </div>
-        </header>
-        <!-- ***** Header Area End ***** -->
-
-
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
 
 
 
@@ -82,236 +162,327 @@
 
     <!-- ***** Wellcome Area Start ***** -->
     <section class="wellcome_area clearfix" id="home">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 col-md">
-                    <div class="wellcome-heading">
-                        <h2>The climate</h2>
-                        <h3>C</h3>
-
-                        <p>Everything You Need. To Start Selling Online Beautifully</p>
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-md">
+                        <div class="wellcome-heading">
+                            <h2>The Weather</h2>
+                            <h3>Weather</h3>
+    
+                            <p></p>
+                        </div>
+                        <div class="get-start-area">
+                                <div id="c">
+                                <form action="#" method="post" class="form-inline">
+                                        {% csrf_token %}
+                                        <input type="text" class="form-control" name="name" id="name" size="25" placeholder="Enter City Name" required>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn submit-btn" >Search</button>
+                                    </form>
+                                    <br><br>
+                                    {% if valid %} 
+                                    <!-- <div class="groove"> -->
+                                    <table>
+                                            <tr>
+                                                    <th><h1><font color="white">city</font></h1></th>             
+                                                    <th><h1><font color="white">description</font></h1></th>
+                                                    <th><h1><font color="white">temprature</font></h1></th>          
+                                                    <th><h1><font color="white">snow</font></h1></th>
+                                                    <th><h1><font color="white">wind</font></h1></th>
+                                                    <th><h1><font color="white">country</font></h1></th>
+                                                    <th><h1><font color="white">rain</font></h2></th>
+                                                    <th><h1><font color="white">icon</font></h1></th>
+                                                  </tr>
+                                                        
+                        
+                                                <tr>
+                                                <td><h2>{{weather.city}}</h2></td>
+                                                <td><h2>{{weather.des}}</h2></td>
+                                                <td><h2>{{weather.temp}}°C</h2></td>
+                                                <td><h2>{{weather.snow}}</h2></td>
+                                                <td><h2>{{weather.wind}}(km/hr)</h2></td>
+                                                <td><h2>{{weather.country}}</h2></td>
+                                                <td><h2>{{weather.rain}}</h2></td>
+                                                <td><ul><li><h2><img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                                                </tr>
+                        
+                                            
+                                            </table>
+                                        </div>
+                                            {% else %} 
+                        
+                                            <div class="media-content">
+                        
+                                                <div class="content" align="center">
+                        
+                                                    <p><h1><font color="white"> {{touser}} </font></h1></p>
+                                                </div>
+                                            </div>
+                                                {% endif %}
+                        </table>
+                                <!-- </div> -->
+                             </div>
                     </div>
-                    <div class="get-start-area">
-                        <!-- Form Start -->
-                        <form action="#" method="post" class="form-inline">
-                            <input type="email" class="form-control email" placeholder="name@company.com">
-                            <input type="submit" class="submit" value="Get Started">
-                        </form>
-                        <!-- Form End -->
-                   
-                       
-                         </div>
                 </div>
+                
             </div>
-            
-        </div>
+    
 
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-        <!-- Welcome thumb -->
-
+      
         <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s" align="right">
-           <!-- <div align="right">
-                {% for weather in weather_data %}
-                    <div class="box">
-                        <article class="media">
-                            <div class="media-left">
-                                <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <span class="title">{{ weather.city }}</span>
-                                        <br>
-                                        <span class="subtitle">{{ weather.temperature }}° F</span>
-                                        <br> {{ weather.description }}
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    {% endfor %}
-            </div>> -->
-            <!-- <img src="{% static 'img/bg-img/sun1.jpg' %}" alt=""> -->
-
+           
          </div>
     </section>
-    <!-- ***** Wellcome Area End ***** -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     <!-- ***** Awesome Features Start ***** -->
-    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
+{% block content %}
+
+
+
+{% endblock %}
+    <!-- ***** Awesome Features End ***** -->
+    <!-- ***** App Screenshots Area Start ***** -->
+    
+    <section class="app-screenshots-area bg-white section_padding_0_100 clearfix" id="screenshot">
         <div class="container">
-                {% block content%}
-            
-                   
-                    {% endblock %}
-
+            <div class="row">
+                <div class="col-12 text-center">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <br>
+                        <h2>GALLERY</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
             </div>
+            <p align="justify">Nature" can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large, if not the only, part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.Within the various uses of the word today, "nature" often refers to geology and wildlife. Nature can refer to the general realm of living plants and animals, and in some cases to the processes associated with inanimate objects—the way that particular types of things exist and change of their own accord, such as the weather and geology of the Earth</p>
+        </div>
+       <div class="container">
+             <br><br>
+             <div class="row">
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  
+                    <img src="{% static 'img/Earth-img/n1.jpg' %}" alt="Lights" style="width:100%">
+                    <div class="caption">
+                      </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  
+                    <img src="{% static 'img/Earth-img/n2.jpg' %}" alt="Nature" style="width:100%">
+                    <div class="caption">
+                      </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  
+                    <img src="{% static 'img/Earth-img/n3.jpg' %}" alt="Fjords" style="width:100%">
+                    <div class="caption">
+                      </div>
+                </div>
+              </div>
+            </div>
+    <div class="row">
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        
+                          <img src="{% static 'img/Earth-img/n4.jpg' %}" alt="Lights" style="width:100%">
+                          <div class="caption">
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        
+                          <img src="{% static 'img/Earth-img/n5.jpg' %}" alt="Nature" style="width:100%">
+                          <div class="caption">
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        
+                          <img src="{% static 'img/Earth-img/n6.jpg' %}" alt="Fjords" style="width:100%">
+                          <div class="caption">
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+       
+                  <p align="justify">A lake (from Latin lacus) is a terrain feature (or physical feature), a body of liquid on the surface of a world that is localized to the bottom of basin (another type of landform or terrain feature; that is, it is not global) and moves slowly if it moves at all. On Earth, a body of water is considered a lake when it is inland, not part of the ocean, is larger and deeper than a pond, and is fed by a river</p>
+                </div>
+       <br><br><br>
 
+       <div class="container-fluid">
+          
+        <div class="row">
+          
+            <div class="col-12">
+                <!-- App Screenshots Slides  -->
+                <div class="app_screenshots_slides owl-carousel">
+                    <div class="single-shot">
+                        <img src="{% static 'img/scr-img/w1.jpg' %}" alt="">
+                    </div>
+                    <div class="single-shot">
+                        <img src="{% static 'img/scr-img/w3.jpg' %}" alt="">
+                    </div>
+                    <div class="single-shot">
+                        <img src="{% static 'img/scr-img/w2.jpg' %}" alt="">
+                    </div>
+                    <div class="single-shot">
+                        <img src="{% static 'img/scr-img/w4.jpg' %}" alt="">
+                    </div>
+                    <div class="single-shot">
+                        <img src="{% static 'img/scr-img/w5.jpg' %}" alt="">
+                    </div>
+                    <div class="single-shot">
+                        <img src="{% static 'img/scr-img/w6.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+    
+    </section>
+    
+    <!-- ***** CTA Area Start ***** -->
+    <section class="our-monthly-membership section_padding_50 clearfix">
+        <div class="container">
+                <div class="section-heading" align= "center">
+                        <h2><font color="red">CLIMATE CHANGE</font></h2>
+                       
+                    </div>
+
+                <p align="justify"><font color="white" >In 2013, the Intergovernmental Panel on Climate Change (IPCC) Fifth Assessment Report concluded, "It is extremely likely that human influence has been the dominant cause of the observed warming since the mid-20th century.” The largest human influence has been the emission of greenhouse gases such as carbon dioxide, methane, and nitrous oxide. Climate model projections summarized in the report indicated that during the 21st century, the global surface temperature is likely to rise a further 0.3 to 1.7 °C (0.5 to 3.1 °F) to 2.6 to 4.8 °C (4.7 to 8.6 °F) depending on the rate of greenhouse gas emissions and on climate feedback effects. These findings have been recognized by the national science academies of the major industrialized nations and are not disputed by any scientific body of national or international standing. 
+                        Future climate change effects are expected to include rising sea levels, ocean acidification, regional changes in precipitation, and expansion of deserts in the subtropics. Surface temperature increases are greatest in the Arctic, with the continuing retreat of glaciers, permafrost, and sea ice. Predicted regional precipitation effects include more frequent extreme weather events such as heat waves, droughts, wildfires, heavy rainfall with floods, and heavy snowfall. Effects directly significant to humans are predicted to include the threat to food security from decreasing crop yields, and the abandonment of populated areas due to rising sea levels. 
+                        Public reactions to global warming and concern about its effects are also increasing. A 2015 global survey showed that a median of 54% of respondents consider it "a very serious problem", with significant regional differences: Americans and Chinese (whose economies are responsible for the greatest annual CO2 emissions) are among the least concerned. 
+                        </font>></p>
+                        <br><br>
+                        <div align="center">
+                                <img src="{% static 'img/scr-img/tempchange.jpg' %}" alt=""></div>
+                                <br><br><p align="justify"><font color="white">Environmental impacts appear likely to include the extinction or relocation of ecosystems as they adapt to climate change, with coral reefs, mountain ecosystems, and Arctic ecosystemsmost immediately threatened. Because the climate system has a large "inertia" and greenhouse gases will remain in the atmosphere for a long time, climatic changes and their effects will continue to become more pronounced for many centuries even if further increases to greenhouse gases stop. 
+                                Possible societal responses to global warming include mitigation by emissions reduction, adaptation to its effects, and possible future climate engineering. Most countries are parties to the United Nations Framework Convention on Climate Change (UNFCCC), whose ultimate objective is to prevent dangerous anthropogenic climate change. Parties to the UNFCCC have agreed that deep cuts in emissions are required and that global warming should be limited to well below 2.0 °C (3.6 °F) compared to pre-industrial levels, with efforts made to limit warming to 1.5 °C (2.7 °F). Some scientists call into question climate adaptation feasibility, with higher emissions scenarios, or the two degree temperature target.
+                                </font>></p>
+                            </div>
+    </section>
+    <!-- ***** CTA Area End ***** -->
+
+
+
+
+
+
+    <!-- ***** Our Team Area Start ***** -->
+   
+    <!-- ***** Our Team Area End ***** -->
+
+
+
+
+
+
+
+
+
+    
+    <!-- ***** Contact Us Area Start ***** -->
+    <section class="footer-contact-area section_padding_100 clearfix" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>Get in touch with us!</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                    <div class="footer-text">
+                        </div>
+                    <div class="address-text">
+                        <p><span>Address:</span>Ladowali RD, jalandhar,punjab 144001</p>
+                    </div>
+                    <div class="phone-text">
+                        <p><span>Phone:</span> +919465886948</p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>Email:</span> avtarsingh24hr@gmail.com</p>
+                    </div>
+                    <div class="address-text">
+                            <p><span>FeedBack:</span>Give Us Your Important FeadBack</p>
+                        </div>
+                        
+                        <a href="{% url 'FeedBack' %}">
+                             <h2><button class="button button5"><font color="white">Feedback</font></button></h2>
+                        </a>
+                     </div>
+
+
+            <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.271355517069!2d75.58644721462588!3d31.323878263953368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a44fe0ad8e7%3A0xd5d2574fbe41e548!2sGuru+Nanak+Dev+University+College!5e0!3m2!1sen!2sin!4v1551618035369" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
+            </div>
         </div>
     </section>
-    <!-- ***** Awesome Features End ***** -->
+    <!-- ***** Contact Us Area End ***** -->
+
+
+
 
 
 
 
 
     <!-- ***** Footer Area Start ***** -->
-    <section class="footer-contact-area section_padding_100 clearfix" id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <!-- Heading Text  -->
-                        <div class="section-heading">
-                            <h2>Get in touch with us!</h2>
-                            <div class="line-shape"></div>
-                        </div>
-                        <div class="footer-text">
-                            </div>
-                        <div class="address-text">
-                            <p><span>Address:</span>Ladowali RD, jalandhar,punjab 144001</p>
-                        </div>
-                        <div class="phone-text">
-                            <p><span>Phone:</span> +919465886948</p>
-                        </div>
-                        <div class="email-text">
-                            <p><span>Email:</span> avtarsingh24hr@gmail.com</p>
-                        </div>
-                    </div>
-    <div class="col-md-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.271355517069!2d75.58644721462588!3d31.323878263953368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a44fe0ad8e7%3A0xd5d2574fbe41e548!2sGuru+Nanak+Dev+University+College!5e0!3m2!1sen!2sin!4v1551618035369" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    
-    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ***** Contact Us Area End ***** -->
-    
-    
-    
-    
-    
-    
-    
-    
-        <!-- ***** Footer Area Start ***** -->
-        <footer class="footer-social-icon text-center section_padding_70 clearfix">
-            <!-- footer logo -->
-            <div class="footer-text">
-                <h2>The Weather</h2>
-            </div>
-            <!-- social icon-->
-            <div class="footer-social-icon">
-                <a href="https://facebook.com/avtarsingh24hr"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
-                <a href="https://twitter.com/avtarsi37862180"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/avtar_singh_sondhi"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="footer-menu"></div>
-                </nav>
-            </div>
-            <!-- Foooter Text-->
-            <div class="copyright-text">
-                <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
-                <p>Copyright ©2019 Designed by <font color="blue">avtar singh</font></p>
-            </div>
-        </footer>
-        <!-- ***** Footer Area Start ***** -->
-    
-        <!-- Jquery-2.2.4 JS -->
-        <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
-        <!-- Popper js -->
-        <script src="{% static 'js/popper.min.js' %}"></script>
-        <!-- Bootstrap-4 Beta JS -->
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <!-- All Plugins JS -->
-        <script src="{% static 'js/plugins.js' %}"></script>
-        <!-- Slick Slider Js-->
-        <script src="{% static 'js/slick.min.js' %}"></script>
-        <!-- Footer Reveal JS -->
-        <script src="{% static 'js/footer-reveal.min.js' %}"></script>
-        <!-- Active JS -->
-        <script src="{% static 'js/active.js' %}"></script>
-    
+    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+        <!-- footer logo -->
+        <div class="footer-text">
+            <h2>The Weather</h2>
+        </div>
+        <!-- social icon-->
+        <div class="footer-social-icon">
+            <a href="https://facebook.com/avtarsingh24hr"><i class="fa fa-facebook" aria-hidden="true"> </i></a>
+            <a href="https://twitter.com/avtarsi37862180"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/avtar_singh_sondhi"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-menu"></div>
+            </nav>
+        </div>
+        <!-- Foooter Text-->
+        <div class="copyright-text">
+            <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+            <p>Copyright ©2019 Designed by <font color="blue">avtar singh</font></p>
+        </div>
+    </footer>
+    <!-- ***** Footer Area Start ***** -->
+
+    <!-- Jquery-2.2.4 JS -->
+    <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap-4 Beta JS -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins JS -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- Slick Slider Js-->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <!-- Footer Reveal JS -->
+    <script src="{% static 'js/footer-reveal.min.js' %}"></script>
+    <!-- Active JS -->
+    <script src="{% static 'js/active.js' %}"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
